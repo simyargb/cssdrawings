@@ -1,19 +1,25 @@
-
-html, body {
+html,
+body {
     margin: 0;
     width: 100%;
     height: 100%;
 }
 
+.press-start-2p-regular {
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 100;
+    font-style: normal;
+}
+
+/*Chameleon*/
 .canvas {
     position: relative;
     background-color: transparent;
     width: 100vw;
-    height: 400px;
+    height: 320px;
 }
 
 #svgCanvas {
-
     background-size: cover;
     background-position: center;
     position: absolute;
@@ -23,13 +29,225 @@ html, body {
     background-color: #FCFCF2;
 }
 
-#chameleon{    
-    
+#chameleon {
     background-color: transparent;
     position: absolute;
     width: 320px;
     height: 320px;
-    top: 50%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+/*Instant Camera*/
+
+#instantdiv {
+    position: relative;
+    place-items: center;
+    display: grid;
+    width: 100vw;
+    height: 320px;
+    align-items: center;
+    background-color: #C72418;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 400px;
+    perspective: 400px;
+}
+
+#ph {
+    font-family: "Press Start 2P", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 8px;
+    font-weight: 100;
+    margin-top: 24px;
+    color: #FCFCF2;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    animation: ph 0.5s steps(1, end) infinite;
+}
+
+@keyframes ph {
+
+    0%,
+    80% {
+        opacity: 1;
+    }
+
+    81%,
+    100% {
+        opacity: 0;
+    }
+}
+
+#camera {
+    opacity: 110%;
+    position: relative;
+    width: 300px;
+    height: 300px;
+}
+
+#paper-window {
+    margin-top: 32px;
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    overflow: hidden;
+    clip-path: inset(212px 0 0);
+    pointer-events: none;
+}
+
+#paper {
+    position: absolute;
+    width: 300px;
+    height: 320px;
+    top: 28%;
+    left: 50%;
+    z-index: 1;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: transform 700ms ease-out;
+}
+
+#paper.ejected {
+    transform: translate(-50%, calc(-50% + 70px));
+}
+
+#paper.remove {
+    animation: paper-fall 1s ease-in forwards;
+}
+
+@keyframes paper-fall {
+    0% {
+        transform-origin: 47px 216px;
+        transform: translate(-50%, calc(-50% + 70px)) rotate(0deg);
+    }
+
+    20% {
+        transform-origin: 47px 216px;
+
+        transform: translate(-50%, calc(-50% + 80px)) rotate(10deg);
+    }
+
+    100% {
+                transform-origin: top-right;
+        transform: translate(-50%, calc(-50% + 330px)) rotate(-24deg);
+    }
+}
+
+#shutter {
+    cursor: pointer;
+}
+
+#txt {
+    box-sizing: border-box;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    font-size: 7px;
+    line-height: 2;
+    font-weight: 500;
+    white-space: pre-line;
+    font-family: "Press Start 2P", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+
+
+/*-----------------------------Witchy    linear-gradient(#ffff, #ffff) 50% 40% / 100% 70%;
+
+#witchy {
+    position: relative;
+    display: grid;
+    min-height: 22em;
+    place-items: center;
+    overflow: hidden;
+    background-color: darkslateblue;
+}
+
+#witchy > div {
+    position: relative;
+    width: min(20em, 90vw);
+    aspect-ratio: 1;
+    background:
+        radial-gradient(circle, transparent 45%, gold 46% 50%, transparent 52%) 43% 38% / 15% 15%,
+        linear-gradient(gold, gold) 50% 40% / 2% .7%,
+        radial-gradient(circle, transparent 45%, gold 46% 50%, transparent 52%) 57% 38% / 15% 15%,
+        conic-gradient(at 50% 0, transparent 160.5deg, color-mix(in srgb, mediumslateblue 98%, white) 161deg 198deg, transparent 198.5deg) 50% 8% / 20% 30%,
+        linear-gradient(color-mix(in srgb, mediumslateblue 98%, white), color-mix(in srgb, mediumslateblue 98%, white)) 50% 35% / 30% 2%,
+        radial-gradient(circle at 50% 0, transparent 47%, black 48% 57%, transparent 58%) 50% 47.5% / 8% 4%,
+        radial-gradient(circle, black 50%, transparent 52%) 47% 40% / 3% 3%,
+        radial-gradient(circle, black 50%, transparent 52%) 53% 40% / 3% 3%,
+        radial-gradient(circle, seagreen 50%, transparent 51%) 45.5% 44.5% / 6% 6%,
+        radial-gradient(circle, seagreen 50%, transparent 51%) 54.5% 44.5% / 6% 6%,
+        radial-gradient(ellipse at 50% 0, mediumseagreen 40%, transparent 40.5%) 50% 50% / 30% 30%,
+        linear-gradient(100deg, transparent 40%, black 40.5%) 40% 40% / 20% 15%,
+        linear-gradient(-100deg, transparent 40%, black 40.5%) 60% 40% / 20% 15%,
+        linear-gradient(sandybrown, sandybrown) 50% 83.8% / 20% 2%,
+        linear-gradient(to bottom, sandybrown 50%, peru 50%) 50% 81.8% / 17% 3%,
+        radial-gradient(ellipse at 0% 0%, transparent 66%, white 68%) 42% 69.5% / 1.5% 2.5%,
+        radial-gradient(ellipse at 100% 0%, transparent 66%, white 68%) 43.54% 69.5% / 1.5% 2.5%,
+        radial-gradient(ellipse at 0% 100%, transparent 66%, white 68%) 42% 72% / 1.5% 2.5%,
+        radial-gradient(ellipse at 100% 100%, transparent 66%, white 68%) 43.54% 72% / 1.5% 2.5%,
+        radial-gradient(circle at 0 90%, transparent 47%, white 48% 50%, transparent 51%) 57.8% 68% / 14% 14%,
+        radial-gradient(circle, thistle 50%, transparent 50.5%) 50% 80% / 30% 30%,
+        linear-gradient(linen, linen) 10% 78% / 2% 15%,
+        linear-gradient(black, black) 10.6% 77% / .5% 16%,
+        radial-gradient(circle, rgb(255 215 0 / 20%) 50%, transparent 52%) 1% 65% / 20% 20%,
+        linear-gradient(linen, linen) 28% 84.5% / 2% 15%,
+        linear-gradient(black, black) 28.4% 83.5% / .5% 16%,
+        radial-gradient(circle, rgb(255 215 0 / 20%) 50%, transparent 52%) 23% 73% / 20% 20%,
+        linear-gradient(linen, linen) 72% 85% / 2% 15%,
+        linear-gradient(black, black) 71.7% 84% / .5% 16%,
+        radial-gradient(circle, rgb(255 215 0 / 20%) 50%, transparent 52%) 77% 73% / 20% 20%,
+        linear-gradient(linen, linen) 90% 78% / 2% 15%,
+        linear-gradient(black, black) 89.3% 77% / .5% 16%,
+        radial-gradient(circle, rgb(255 215 0 / 20%) 50%, transparent 52%) 99% 65% / 20% 20%,
+        linear-gradient(145deg, transparent 63%, color-mix(in srgb, mediumslateblue 98%, white) 63.2%) 65.5% 14.9% / 3% 2.5%,
+        linear-gradient(135deg, transparent 52%, black 52.1% 61.2%, transparent 61.3%) 65% 16.6% / 10% 11%,
+        radial-gradient(circle at 0 0, black 59.4%, transparent 60%) 68% 21% / 5% 5%,
+        linear-gradient(135deg, transparent 20%, black 20%) 64% 21.8% / 3% 3%,
+        linear-gradient(130deg, transparent 58%, black 59% 70%, transparent 71%) 64% 23% / 2% 3%,
+        linear-gradient(130deg, transparent 58%, black 59% 70%, transparent 71%) 65% 23% / 2% 3%,
+        linear-gradient(60deg, transparent 48%, black 49% 58%, transparent 59%) 64.3% 26% / 3% 3%,
+        linear-gradient(60deg, transparent 48%, black 49% 58%, transparent 59%) 65.3% 26% / 3% 3%,
+        radial-gradient(ellipse at 40% 100%, slateblue 45%, transparent 45.2%) 35% -60% / 50% 90%,
+        radial-gradient(ellipse at 40% 100%, slateblue 45%, transparent 45.2%) 85% -60% / 50% 90%;
+    background-repeat: no-repeat;
+}
+
+#witchy > div::before {
+    position: absolute;
+    content: "";
+    width: 2%;
+    height: 2%;
+    left: 9.8%;
+    top: 62.5%;
+    background-color: gold;
+    border-radius: 50%;
+    border-top-left-radius: 0;
+    box-shadow: -.1em -.1em 0 .2em darkorange,
+        3.3em -1.7em 0 gold,
+        3.2em -1.8em 0 .2em darkorange,
+        9.45em -7.75em 0 gold,
+        9.35em -7.85em 0 .2em darkorange,
+        11.1em -11.05em 0 gold,
+        11em -11.15em 0 .2em darkorange;
+    transform: rotate(45deg);
+}
+
+#witchy > div::after {
+    position: absolute;
+    content: "";
+    width: 2.5%;
+    height: 5.5%;
+    right: 31.2%;
+    top: 14.8%;
+    background: radial-gradient(circle at 40% 25%, white 3%, transparent 4%);
+    background-color: black;
+    border-radius: 2em 2em 0 0;
+} 
+-----------------------------*/
