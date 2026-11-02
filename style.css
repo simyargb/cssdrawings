@@ -16,7 +16,7 @@ body {
     position: relative;
     background-color: transparent;
     width: 100vw;
-    height: 320px;
+    height: 380px;
 }
 
 #svgCanvas {
@@ -46,8 +46,9 @@ body {
     place-items: center;
     display: grid;
     width: 100vw;
-    height: 320px;
+    height: 380px;
     align-items: center;
+    justify-content: center;
     background-color: #C72418;
     background-repeat: no-repeat;
     background-position: center;
@@ -60,10 +61,14 @@ body {
     font-size: 8px;
     font-weight: 100;
     margin-top: 24px;
+    margin-left: 0;
     color: #FCFCF2;
     margin-bottom: 0;
+    text-align: center;
     padding-bottom: 0;
     animation: ph 0.5s steps(1, end) infinite;
+    mix-blend-mode: normal;
+text-shadow: none;
 }
 
 @keyframes ph {
@@ -87,7 +92,7 @@ body {
 }
 
 #paper-window {
-    margin-top: 32px;
+    margin-top: 68px;
     position: absolute;
     inset: 0;
     z-index: 1;
@@ -162,8 +167,7 @@ body {
   justify-content: center;
   place-items: center;
   width: 100%;
-  
-  height: 320px;
+  height: 380px;
   background-color: Aquamarine;
 }
 
@@ -229,7 +233,7 @@ body {
   justify-content: center;
   place-items: center;
   width: 100%;
-  height: 320px;
+  height: 380px;
   border-radius: 8px;
 }
 
@@ -298,4 +302,273 @@ body {
   top: 90%;
   background-color: transparent;
   background-repeat: no-repeat;
+}
+
+
+.rdrow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+}
+
+/* Elevetor */
+
+.panel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+    width: 50%;
+    background-color: #f8ead3;
+}
+
+.elevator{
+  display:flex;
+  position:relative;
+  justify-content: center;
+  align-items:center;
+  width: 150px;
+  height: 450px;   
+  border: 5px solid darkgray;
+  box-shadow:  0 0 2px 2px black,
+    inset 0 2px white;
+  border-radius: 8px 8px 8px 8px;
+  background:
+    radial-gradient(circle closest-side,  #ffffff 0%, #d8dbe0 30%, #d8dbe0 55%, #25272d 73%,  #b2b6bd 75%, #b2b6bd 78%, #25272d 85%, #ffffff 90%,  transparent 95%) 73% 95% / 28% 11%,
+     radial-gradient(circle closest-side,  #ffffff 0%, #d8dbe0 30%, #d8dbe0 55%, #25272d 73%,  #b2b6bd 75%, #b2b6bd 78%, #25272d 85%, #ffffff 90%,  transparent 95%) 32% 95% / 28% 11%,
+    
+    /*last button*/
+      radial-gradient(circle closest-side,  #ffffff 0%, #d8dbe0 30%, #d8dbe0 55%, #25272d 73%,  #b2b6bd 75%, #b2b6bd 78%, #25272d 85%, #ffffff 90%,  transparent 95%) 15% 79.7% / 28% 11%,
+
+    radial-gradient(#bec2ca 65%, transparent 70%) 15% 79% / 29% 9%,
+    linear-gradient(#bec2ca  40%, #bec2ca 100%) 46% 79% / 50% 8.8%,
+    radial-gradient(#bec2ca 70%, transparent 70%) 83% 79.05% / 29% 9%,
+
+     /*3rd button*/
+     radial-gradient(circle closest-side,  #ffffff 0%, #d8dbe0 30%, #d8dbe0 55%, #25272d 73%,  #b2b6bd 75%, #b2b6bd 78%, #25272d 85%, #ffffff 90%,  transparent 95%) 15% 68.4% / 28% 11%,
+    radial-gradient(#bec2ca 65%, transparent 70%) 15% 68% / 29% 9%,
+    linear-gradient(#bec2ca 40%, #bec2ca 100%) 46% 68% / 50% 8.8%,
+    radial-gradient(#bec2ca 70%, transparent 70%) 83% 68.05% / 29% 9%,
+
+     /*2nd button*/
+     radial-gradient(circle closest-side,  #ffffff 0%, #d8dbe0 30%, #d8dbe0 55%, #25272d 73%,  #b2b6bd 75%, #b2b6bd 78%, #25272d 85%, #ffffff 90%,  transparent 95%) 15% 57.3% / 28% 11%,
+    radial-gradient(#bec2ca 65%, transparent 70%) 15% 57% / 29% 9%,
+    linear-gradient(#bec2ca 40%, #bec2ca 100%) 46% 57% / 50% 8.8%,
+    radial-gradient(#bec2ca 70%, transparent 70%) 83% 57.05% / 29% 9%,
+    
+    /*top button*/
+    radial-gradient(circle closest-side,  #ffffff 0%, #d8dbe0 30%, #d8dbe0 55%, #25272d 73%,  #b2b6bd 75%, #b2b6bd 78%, #25272d 85%, #ffffff 90%,  transparent 95%) 15% 45.9% / 28% 11%,
+    radial-gradient(#bec2ca 65%, transparent 70%) 15% 45.8% / 29% 9%,
+    linear-gradient(#bec2ca 40%, #bec2ca 100%) 46% 46% / 50% 8.8%,
+    radial-gradient(#bec2ca 70%, transparent 70%) 83% 46% / 29% 8.8%,
+    linear-gradient(#e3e5e8 40%, #c7cad1 100%) 100% 100% / 100% 100%;
+  background-repeat:no-repeat;
+}
+
+.elevator:after {
+  content:'';
+  position: absolute;
+  width:110px;
+  height: 132px;
+  background: linear-gradient(#191919 40%, #4c4c4c 100%) 50% 10% / 100% 100%;
+  top: 32px;
+  border: 1px solid darkgray;
+  box-shadow:  0 0 2px 2px black,
+    inset 0 2px white;
+  border-radius: 8px 8px 8px 8px;
+  background-repeat:no-repeat;
+  z-index: 1;
+}
+
+.elevator:before {
+  content:'';
+  position: absolute;
+  width:99px;
+  height: 120px;
+  top: 48px;
+  left: 30px;
+  z-index: 2;
+  background: linear-gradient(#17191c 100%) 0% 0% / 10% 10%,
+    linear-gradient(#17191c 100%) 15% 0% / 10% 10%,
+    linear-gradient(#17191c 100%) 30% 0% / 10% 10%,
+    linear-gradient(#17191c 100%) 45% 0% / 10% 10%,
+    linear-gradient(#17191c 100%) 60% 0% / 10% 10%,
+    linear-gradient(#17191c 100%) 75% 0% / 10% 10%,
+    linear-gradient(#17191c 100%) 90% 0% / 10% 10%,
+        linear-gradient(#17191c 100%) 0% 15% / 10% 10%,
+        linear-gradient(#17191c 100%) 0% 30% / 10% 10%,
+            linear-gradient(#17191c 100%) 0% 45% / 10% 10%,
+            linear-gradient(#17191c 100%) 0% 60% / 10% 10%,
+        linear-gradient(#17191c 100%) 0% 75% / 10% 10%,
+        linear-gradient(#17191c 100%) 0% 90% / 10% 10%,
+          linear-gradient(#17191c 100%) 15% 15% / 10% 10%,
+          linear-gradient(#17191c 100%) 15% 30% / 10% 10%  ,
+              linear-gradient(#17191c 100%) 15% 45% / 10% 10% ,
+              linear-gradient(#17191c 100%) 15% 60% / 10% 10% ,
+              linear-gradient(#17191c 100%) 15% 75% / 10% 10%  ,
+              linear-gradient(#17191c 100%) 15% 90% / 10% 10% ,
+              linear-gradient(#17191c 100%) 30% 30% / 10% 10%,
+              linear-gradient(#17191c 100%) 45% 30% / 10% 10%,
+              linear-gradient(red 100%) 60% 30% / 10% 10%,
+    linear-gradient(#17191c 100%) 75% 30% / 10% 10%,
+    linear-gradient(#17191c 100%) 90% 30% / 10% 10% ,
+  linear-gradient(red 100%) 60% 15% / 10% 10% ,
+      linear-gradient(red 100%) 60% 45% / 10% 10% ,
+      linear-gradient(red 100%) 60% 60% / 10% 10%,
+      linear-gradient(red 100%) 60% 75% / 10% 10%,
+      linear-gradient(#17191c 100%) 60% 90% / 10% 10% ,
+    linear-gradient(#17191c 100%) 30% 45% / 10% 10% ,
+        linear-gradient(#17191c 100%) 30% 60% / 10% 10% ,
+    linear-gradient(#17191c 100%) 30% 75% / 10% 10% ,
+        linear-gradient(#17191c 100%) 30% 90% / 10% 10%,
+        linear-gradient(#17191c 100%) 45% 60% / 10% 10% ,
+            linear-gradient(#17191c 100%) 45% 75% / 10% 10% ,
+            linear-gradient(#17191c 100%) 45% 45% / 10% 10% ,
+            linear-gradient(#17191c 100%) 45% 90% / 10% 10% ,
+            linear-gradient(#17191c 100%) 75% 45% / 10% 10%,
+            linear-gradient(#17191c 100%) 75% 60% / 10% 10%,
+            linear-gradient(#17191c 100%) 75% 75% / 10% 10%,
+            linear-gradient(#17191c 100%) 75% 90% / 10% 10% ,
+            linear-gradient(#17191c 100%) 90% 45% / 10% 10% ,
+    linear-gradient(red 100%) 45% 15% / 10% 10% ,
+            linear-gradient(#17191c 100%) 90% 60% / 10% 10% ,
+                linear-gradient(#17191c 100%) 90% 75% / 10% 10%,
+                linear-gradient(#17191c 100%) 90% 90% / 10% 10% ;
+  background-repeat:no-repeat
+  
+}
+
+
+p{
+  margin-top:118px;
+  line-height: 1.65em;
+  margin-left: 35px;
+  font-size:13px;
+  letter-spacing: 2px;
+  color: #17191c;
+  mix-blend-mode: multiply;
+  text-shadow: 
+      0px 0px 1px rgba(0, 0, 0, 0.8),   
+      1px 1px 1px rgba(255, 255, 255, 0.4); 
+}
+
+.icons{
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 56px;
+  gap: 24px;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #17191c;
+  left:46px;
+  top: 396px;
+    text-shadow: 
+      0px 0px 1px rgba(0, 0, 0, 0.8),   
+      1px 1px 1px rgba(255, 255, 255, 0.4); 
+}
+
+
+/*lighter */
+
+
+.lt {
+  position: relative;
+  place-content: center;
+  width: 50%;
+  height: 600px;
+  cursor: pointer;
+  display: flex;
+    justify-content: center;
+    align-items: center;
+      isolation: isolate;
+
+    background: #C8A2C8;
+}
+
+.lighter {
+  position: relative;
+  place-content:center;
+  width: 120px;
+  height:300px;
+  top: 72px;
+  border-radius: 0px 8px 8px 8px;
+    z-index: auto;
+  background: linear-gradient(to right, Tomato 5%,  #f37d68 6%, #f37d68 79%, Tomato 71%);
+}
+
+.lighter:after {
+  content:"";
+  position: absolute;
+  background-repeat: no-repeat;
+  width: 70px;
+  height: 100px;
+  border-radius: 14px;
+  top: -88px;
+  left: 0px;
+  z-index: 1;
+  background: 
+    linear-gradient(180deg, transparent 3%, transparent 41%, #646868 41%) no-repeat 0% 40% / 22% 5%,
+    linear-gradient(180deg, transparent 3%, transparent 41%, #646868 41%) no-repeat 0% 48% / 22% 5%,
+    linear-gradient(180deg, transparent 3%, transparent 41%, #646868 41%) no-repeat 0% 56% / 22% 5%,
+    linear-gradient(to right, LightGray 3%, #f2edf1 6%, #f2edf1 59%, #a1a1a0 63%, #a1a1a0 66%, #e3e5e8 64%, #e3e5e8 71%, LightGray 72%) no-repeat 44% 44% / 100% 80%;
+}
+
+
+.lighter:before {
+  content:"";
+  position: absolute;
+  background-repeat: no-repeat;
+  width: 70px;
+  height: 100px;
+  top: -86px;
+  left: 50px;
+  z-index:-1;
+  background: 
+    linear-gradient(to right, #f37d68 3%, #f37d68 6%, #f37d68 59%) no-repeat 44% 12% / 100% 15%,
+    linear-gradient(to right, #f25f45 3%, #f25f45 25%, #f25f45 92%, transparent 92% ,transparent 100%) no-repeat 20% 64% / 100% 64%;
+    transition: top 0.1s ease-out; 
+}
+
+
+.lt.animate .lighter:before {
+  top: -33px;
+}
+
+
+.light {
+  position: absolute;
+  background-repeat: no-repeat;
+  width: 80px;
+  height: 120px;
+  top: 60px; 
+  opacity: 0;
+   transform: scale(0.1) translateY(40px);
+  transform-origin: center bottom;
+  left: 410px;
+  background: radial-gradient(ellipse, palegoldenrod 30%, yellow 50%, rgba(255, 255, 0, 0) 70%) no-repeat 30% 15% / 40% 60%;
+ transition: transform 0.15s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.1s ease-out;
+}
+
+.lt.animate .light {
+  
+  opacity: 1;
+  animation: flameBurner 0.15s infinite alternate ease-in-out;
+}
+
+@keyframes flameBurner {
+  0% {
+    transform: scale(1) translateY(0) scaleX(0.95);
+    filter: brightness(1) drop-shadow(0 0 5px rgba(255, 235, 150, 0.4));
+  }
+  50% {
+    transform: scale(1.04) translateY(-2px) scaleX(1.02) rotate(-0.5deg);
+  }
+  100% {
+    transform: scale(0.98) translateY(1px) scaleX(0.97) rotate(0.5deg);
+    filter: brightness(1.2) drop-shadow(0 0 12px rgba(255, 215, 0, 0.6));
+  }
 }
