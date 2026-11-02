@@ -62,3 +62,17 @@ paper.addEventListener("animationend", (event) => {
   void paper.getBoundingClientRect(); // Apply the reset immediately
   paper.style.removeProperty("transition");
 });
+
+const lighter = document.querySelector('.lt');
+
+lighter.addEventListener('mousedown', () => {
+  requestAnimationFrame(() => {
+    lighter.classList.add('animate');
+  });
+});
+
+lighter.addEventListener('mouseup', () => {
+  requestAnimationFrame(() => {
+    lighter.classList.remove('animate'); // Fixed variable name from 'lt' to 'lighter'
+  });
+});
