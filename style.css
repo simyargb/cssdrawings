@@ -154,100 +154,148 @@ body {
     font-family: "Press Start 2P", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+/* Blue Robot */
 
-
-
-/*-----------------------------Witchy    linear-gradient(#ffff, #ffff) 50% 40% / 100% 70%;
-
-#witchy {
-    position: relative;
-    display: grid;
-    min-height: 22em;
-    place-items: center;
-    overflow: hidden;
-    background-color: darkslateblue;
+.robot-stage {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  place-items: center;
+  width: 100%;
+  
+  height: 320px;
+  background-color: Aquamarine;
 }
 
-#witchy > div {
-    position: relative;
-    width: min(20em, 90vw);
-    aspect-ratio: 1;
-    background:
-        radial-gradient(circle, transparent 45%, gold 46% 50%, transparent 52%) 43% 38% / 15% 15%,
-        linear-gradient(gold, gold) 50% 40% / 2% .7%,
-        radial-gradient(circle, transparent 45%, gold 46% 50%, transparent 52%) 57% 38% / 15% 15%,
-        conic-gradient(at 50% 0, transparent 160.5deg, color-mix(in srgb, mediumslateblue 98%, white) 161deg 198deg, transparent 198.5deg) 50% 8% / 20% 30%,
-        linear-gradient(color-mix(in srgb, mediumslateblue 98%, white), color-mix(in srgb, mediumslateblue 98%, white)) 50% 35% / 30% 2%,
-        radial-gradient(circle at 50% 0, transparent 47%, black 48% 57%, transparent 58%) 50% 47.5% / 8% 4%,
-        radial-gradient(circle, black 50%, transparent 52%) 47% 40% / 3% 3%,
-        radial-gradient(circle, black 50%, transparent 52%) 53% 40% / 3% 3%,
-        radial-gradient(circle, seagreen 50%, transparent 51%) 45.5% 44.5% / 6% 6%,
-        radial-gradient(circle, seagreen 50%, transparent 51%) 54.5% 44.5% / 6% 6%,
-        radial-gradient(ellipse at 50% 0, mediumseagreen 40%, transparent 40.5%) 50% 50% / 30% 30%,
-        linear-gradient(100deg, transparent 40%, black 40.5%) 40% 40% / 20% 15%,
-        linear-gradient(-100deg, transparent 40%, black 40.5%) 60% 40% / 20% 15%,
-        linear-gradient(sandybrown, sandybrown) 50% 83.8% / 20% 2%,
-        linear-gradient(to bottom, sandybrown 50%, peru 50%) 50% 81.8% / 17% 3%,
-        radial-gradient(ellipse at 0% 0%, transparent 66%, white 68%) 42% 69.5% / 1.5% 2.5%,
-        radial-gradient(ellipse at 100% 0%, transparent 66%, white 68%) 43.54% 69.5% / 1.5% 2.5%,
-        radial-gradient(ellipse at 0% 100%, transparent 66%, white 68%) 42% 72% / 1.5% 2.5%,
-        radial-gradient(ellipse at 100% 100%, transparent 66%, white 68%) 43.54% 72% / 1.5% 2.5%,
-        radial-gradient(circle at 0 90%, transparent 47%, white 48% 50%, transparent 51%) 57.8% 68% / 14% 14%,
-        radial-gradient(circle, thistle 50%, transparent 50.5%) 50% 80% / 30% 30%,
-        linear-gradient(linen, linen) 10% 78% / 2% 15%,
-        linear-gradient(black, black) 10.6% 77% / .5% 16%,
-        radial-gradient(circle, rgb(255 215 0 / 20%) 50%, transparent 52%) 1% 65% / 20% 20%,
-        linear-gradient(linen, linen) 28% 84.5% / 2% 15%,
-        linear-gradient(black, black) 28.4% 83.5% / .5% 16%,
-        radial-gradient(circle, rgb(255 215 0 / 20%) 50%, transparent 52%) 23% 73% / 20% 20%,
-        linear-gradient(linen, linen) 72% 85% / 2% 15%,
-        linear-gradient(black, black) 71.7% 84% / .5% 16%,
-        radial-gradient(circle, rgb(255 215 0 / 20%) 50%, transparent 52%) 77% 73% / 20% 20%,
-        linear-gradient(linen, linen) 90% 78% / 2% 15%,
-        linear-gradient(black, black) 89.3% 77% / .5% 16%,
-        radial-gradient(circle, rgb(255 215 0 / 20%) 50%, transparent 52%) 99% 65% / 20% 20%,
-        linear-gradient(145deg, transparent 63%, color-mix(in srgb, mediumslateblue 98%, white) 63.2%) 65.5% 14.9% / 3% 2.5%,
-        linear-gradient(135deg, transparent 52%, black 52.1% 61.2%, transparent 61.3%) 65% 16.6% / 10% 11%,
-        radial-gradient(circle at 0 0, black 59.4%, transparent 60%) 68% 21% / 5% 5%,
-        linear-gradient(135deg, transparent 20%, black 20%) 64% 21.8% / 3% 3%,
-        linear-gradient(130deg, transparent 58%, black 59% 70%, transparent 71%) 64% 23% / 2% 3%,
-        linear-gradient(130deg, transparent 58%, black 59% 70%, transparent 71%) 65% 23% / 2% 3%,
-        linear-gradient(60deg, transparent 48%, black 49% 58%, transparent 59%) 64.3% 26% / 3% 3%,
-        linear-gradient(60deg, transparent 48%, black 49% 58%, transparent 59%) 65.3% 26% / 3% 3%,
-        radial-gradient(ellipse at 40% 100%, slateblue 45%, transparent 45.2%) 35% -60% / 50% 90%,
-        radial-gradient(ellipse at 40% 100%, slateblue 45%, transparent 45.2%) 85% -60% / 50% 90%;
-    background-repeat: no-repeat;
+#bluerobot {
+  position: absolute;
+  width: 200px;
+  height: 250px;
+  background-color: DeepSkyBlue;
+  border-radius: 94px 94px 32px 32px;
+  border-right: 8px solid dodgerblue;
+  border-top: 4px solid dodgerblue;
+  background-repeat: no-repeat;
+  place-content: center;
+  scale: 0.8;
 }
 
-#witchy > div::before {
-    position: absolute;
-    content: "";
-    width: 2%;
-    height: 2%;
-    left: 9.8%;
-    top: 62.5%;
-    background-color: gold;
-    border-radius: 50%;
-    border-top-left-radius: 0;
-    box-shadow: -.1em -.1em 0 .2em darkorange,
-        3.3em -1.7em 0 gold,
-        3.2em -1.8em 0 .2em darkorange,
-        9.45em -7.75em 0 gold,
-        9.35em -7.85em 0 .2em darkorange,
-        11.1em -11.05em 0 gold,
-        11em -11.15em 0 .2em darkorange;
-    transform: rotate(45deg);
+#bluerobot::after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 65px;
+  top: 15%;
+  left: 25%;
+  background:
+    radial-gradient(ellipse, dodgerblue 66%, transparent 67%) 80% 120% / 6em 1em,
+    radial-gradient(ellipse, #004c66 66%, transparent 67%) 55% 100% / 3em 3em,
+
+    radial-gradient(ellipse, AliceBlue 66%, transparent 67%) 90% 0% / 6em 6em,
+    radial-gradient(ellipse, dodgerblue 66%, transparent 67%) 80% 10% / 6em 6em;
+  background-repeat: no-repeat;
 }
 
-#witchy > div::after {
-    position: absolute;
-    content: "";
-    width: 2.5%;
-    height: 5.5%;
-    right: 31.2%;
-    top: 14.8%;
-    background: radial-gradient(circle at 40% 25%, white 3%, transparent 4%);
-    background-color: black;
-    border-radius: 2em 2em 0 0;
-} 
------------------------------*/
+#bluerobot::before {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 90px;
+  top: 60%;
+  left: 15%;
+  z-index: 3;
+  background-size: 26px 100%;
+
+  background:
+    linear-gradient(deepskyblue 90%) 100% 100% / 100% 10%,
+
+    radial-gradient(ellipse, transparent 60%, dodgerblue 61%, deepskyblue 67%) 45% 25% / 7em 4em,
+    repeating-linear-gradient(180deg, DarkBlue, dodgerblue, PowderBlue, dodgerblue, PowderBlue) 23% 25% / 3% 68%,
+    linear-gradient(DarkBlue, dodgerblue, PowderBlue, dodgerblue, PowderBlue) 33% 25% / 3% 68%,
+    linear-gradient(DarkBlue, dodgerblue, PowderBlue, dodgerblue, PowderBlue) 43% 25% / 3% 68%,
+    linear-gradient(DarkBlue, dodgerblue, PowderBlue, dodgerblue, PowderBlue) 53% 25% / 3% 68%,
+    linear-gradient(DarkBlue, dodgerblue, PowderBlue, dodgerblue, PowderBlue) 63% 25% / 3% 68%,
+    linear-gradient(DarkBlue, dodgerblue, PowderBlue, dodgerblue, PowderBlue) 73% 25% / 3% 68%,
+    radial-gradient(ellipse, #00131a 60%, dodgerblue 61%, deepskyblue 67%) 45% 25% / 7em 4em;
+
+  background-repeat: no-repeat;
+}
+
+
+/* Birdy SVG container */
+#birdysvgbh {
+  background: antiquewhite;
+  display: flex;
+  justify-content: center;
+  place-items: center;
+  width: 100%;
+  height: 320px;
+  border-radius: 8px;
+}
+
+#birdy{
+  display: flex;
+  align-items: center;
+  position: relative;
+  place-content: center; 
+  width:320px;
+  height:320px;
+  background-color: Gold;
+  scale: 0.7;
+  background:       
+    radial-gradient(ellipse, red 66%, transparent 67%) 
+    4% 26% / 1em 1em,
+      radial-gradient(ellipse, Gold 66%, transparent 67%) 
+    70% 30% / 7em 8em,
+    radial-gradient(ellipse, black 66%, transparent 67%) 
+    70% 33% / 7.3em 8em,
+    radial-gradient(circle, white 66%, transparent 67%) 
+    15% 17% / 1em 1em , 
+    radial-gradient(circle, black 66%, transparent 67%) 
+    15% 17% / 2.4em 2.4em,
+    radial-gradient(ellipse, Gold 66%, transparent 67%) 
+    1% 3% / 8.8em 8.1em,
+    radial-gradient(ellipse, black 66%, transparent 67%) 
+    0% 0% / 8.9em 8.3em,
+    radial-gradient(ellipse, Gold 66%, transparent 67%) 
+    50% 65% / 20em 20em,
+    radial-gradient(ellipse, black 66%, transparent 67%) 
+    50% 50% / 20.5em 20.5em,
+      radial-gradient(ellipse, AntiqueWhite 66%, transparent 67%) 
+    102% 66% / 3em 3em,
+      radial-gradient(ellipse, black 66%, transparent 67%) 
+    99% 70% / 3em 3em,
+      radial-gradient(ellipse, AntiqueWhite 66%, transparent 67%) 
+    32% 100% / 3em 3em,
+      radial-gradient(ellipse, black 66%, transparent 67%) 
+    34% 100% / 3em 3em;
+  background-repeat: no-repeat;
+}
+
+#birdy::after{
+  content: "";
+  position: absolute;
+  width: 45px;
+  height: 30px;
+  top: 25%;
+  left: -8%;
+  background:
+    conic-gradient(from 70deg at 0% 0%, 
+  transparent 0deg, 
+  red 20deg 40deg, 
+  transparent 40deg);
+  background-repeat: no-repeat;
+}
+
+#birdy::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 50px;
+  border-right: 5px solid black;
+  border-radius: 99px;
+  left:20%;
+  top: 90%;
+  background-color: transparent;
+  background-repeat: no-repeat;
+}
