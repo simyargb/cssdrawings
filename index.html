@@ -9,6 +9,97 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
+
+<div id="birdysvgbh">
+  <div id="birdy">
+  </div>
+</div>
+
+
+
+<div id="instantdiv">
+  <p id="ph"><-- Take a Photo --></p>
+  <svg class="instant" id="camera">
+
+    <defs>
+      <linearGradient id="stripeStroke" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="30%" stop-color="#191511" />
+        <stop offset="100%" stop-color="#474340" />
+      </linearGradient>
+
+      <radialGradient id="innerShade">
+        <stop offset="0%" stop-color="#bd4038" />
+        <stop offset="80%" stop-color="#e02b1f" />
+      </radialGradient>
+    </defs>
+    <ellipse cx="232" cy="77" rx="48" ry="59" fill="#e9e9e9" stroke-width="1" />
+
+    <rect x="7" y="28" width="288" height="145" rx="45" ry="55" stroke-width="6" fill="#e9e9e9" />
+    <rect x="7" y="90" width="288" height="156" rx="45" ry="55" stroke-width="6" fill="#c9cac5" />
+    <rect x="7" y="48" width="288" height="145" rx="25" ry="25" stroke-width="6" fill="white" />
+    <rect x="7" y="52" width="288" height="145" rx="25" ry="25" stroke-width="6" fill="white" />
+    <rect x="7" y="50" width="288" height="145" rx="25" ry="25" stroke-width="6" fill="#f6f6f6" />
+    <rect x="135" y="40" width="7" height="35" rx="1" ry="1" stroke-width="6" fill="red" />
+    <rect x="142" y="40" width="7" height="35" rx="1" ry="1" stroke-width="6" fill="orange" />
+    <rect x="149" y="40" width="7" height="35" rx="1" ry="1" stroke-width="6" fill="yellow" />
+    <rect x="156" y="40" width="7" height="35" rx="1" ry="1" stroke-width="6" fill="green" />
+    <rect x="163" y="40" width="7" height="35" rx="1" ry="1" stroke-width="6" fill="blue" />
+    <rect x="135" y="48" width="45" height="2" rx="0" ry="1" stroke-width="6" fill="white" opacity=0.4 />
+
+    <circle cx="153" cy="105" r="43" fill="#201c19" stoke-width="3" stroke="grey" />
+    <circle cx="153" cy="105" r="40" stroke-width="1" stroke="url(#stripeStroke)" />
+    <circle cx="153" cy="105" r="37" stroke-width="1" stroke="url(#stripeStroke)" />
+    <circle cx="153" cy="105" r="34" stroke-width="1" stroke="url(#stripeStroke)" />
+    <circle cx="153" cy="105" r="31" stroke-width="1" stroke="url(#stripeStroke)" />
+    <circle cx="153" cy="105" r="27" stroke-width="1" stroke="url(#stripeStroke)" />
+    <circle cx="153" cy="105" r="23" fill="#201c19" stroke-width="1" stroke="url(#stripeStroke)" />
+
+    //flash
+    <rect x="18" y="62" width="75" height="74" rx="15" ry="15" stroke-width="3" fill="#201c19" />
+    <rect x="22" y="66" width="68" height="44" rx="10" ry="10" stroke-width="3" fill="#b5adaa" />
+    <rect x="22" y="76" width="68" height="34" rx="1" ry="1" stroke-width="3" fill="#d6cecb" />
+    <rect x="24" y="68" width="1" height="43" rx="2" ry="2" stroke-width="3" fill="#403f44" />
+    <rect x="30" y="65" width="1" height="46" rx="3" ry="3" stroke-width="3" fill="#403f44" />
+    <rect x="36" y="65" width="1" height="46" rx="3" ry="3" stroke-width="3" fill="#403f44" />
+    <rect x="42" y="65" width="1" height="46" rx="3" ry="3" stroke-width="3" fill="#403f44" />
+    <rect x="48" y="65" width="1" height="46" rx="3" ry="3" stroke-width="3" fill="#403f44" />
+    <rect x="54" y="65" width="1" height="46" rx="3" ry="3" stroke-width="3" fill="#403f44" />
+    <rect x="60" y="65" width="1" height="46" rx="3" ry="3" stroke-width="3" fill="#403f44" />
+    <rect x="66" y="65" width="1" height="46" rx="3" ry="3" stroke-width="3" fill="#403f44" />
+    <rect x="72" y="65" width="1" height="46" rx="3" ry="3" stroke-width="3" fill="#403f44" />
+    <rect x="78" y="65" width="1" height="46" rx="3" ry="3" stroke-width="3" fill="#403f44" />
+    <rect x="84" y="65" width="1" height="46" rx="3" ry="3" stroke-width="3" fill="#403f44" />
+
+    //flashright
+    <rect x="210" y="62" width="75" height="74" rx="15" ry="15" stroke-width="3" fill="#201c19" />
+    <rect x="210" y="93" width="75" height="42" rx="15" ry="15" stroke-width="3" fill="#403f44" />
+    <rect x="210" y="93" width="75" height="12" rx="1" ry="1" stroke-width="3" fill="#403f44" />
+
+    //ellipse
+    <ellipse class="shoot" cx="80" cy="35" rx="22" ry="4" fill="grey" stroke-width="1" />
+
+    <ellipse class="shoot" cx="80" cy="35" rx="20" ry="3" fill="#f2ceca" stroke-width="1" />
+    <ellipse id="shutter" class="shoot" cx="80" cy="34" rx="20" ry="3" fill="url(#innerShade)" stroke-width="1" />
+
+    //exit
+    <rect x="42" y="206" width="222" height="14" rx="6" ry="6" stroke-width="3" fill="black" />
+    <rect x="43" y="206" width="220" height="11" rx="6" ry="6" stroke-width="3" fill="#262626" />
+    <rect x="45" y="211" width="216" height="3" rx="1" ry="1" stroke-width="1" fill="black" />
+
+  </svg>
+  <div id="paper-window">
+    <svg class="paper" id="paper" viewBox="0 0 300 320">
+      <g id="advice" class="adv">
+        <rect x="47" y="216" width="212" height="66" fill="white" />
+        <foreignObject x="55" y="220" width="196" height="55">
+          <div xmlns="http://www.w3.org/1999/xhtml" id="txt">
+          </div>
+        </foreignObject>
+      </g>
+    </svg>
+  </div>
+</div>
+
 <div class="canvas">
   <svg id="svgCanvas">
     <g id="background">
@@ -423,93 +514,8 @@
 
 </div>
 
-
-<div id="instantdiv">
-  <p id="ph"><-- Take a Photo --></p>
-  <svg class="instant" id="camera">
-
-    <defs>
-      <linearGradient id="stripeStroke" x1="0%" y1="0%" x2="0%" y2="100%">
-        <stop offset="30%" stop-color="#191511" />
-        <stop offset="100%" stop-color="#474340" />
-      </linearGradient>
-
-      <radialGradient id="innerShade">
-        <stop offset="0%" stop-color="#bd4038" />
-        <stop offset="80%" stop-color="#e02b1f" />
-      </radialGradient>
-    </defs>
-    <ellipse cx="232" cy="77" rx="48" ry="59" fill="#e9e9e9" stroke-width="1" />
-
-    <rect x="7" y="28" width="288" height="145" rx="45" ry="55" stroke-width="6" fill="#e9e9e9" />
-    <rect x="7" y="90" width="288" height="156" rx="45" ry="55" stroke-width="6" fill="#c9cac5" />
-    <rect x="7" y="48" width="288" height="145" rx="25" ry="25" stroke-width="6" fill="white" />
-    <rect x="7" y="52" width="288" height="145" rx="25" ry="25" stroke-width="6" fill="white" />
-    <rect x="7" y="50" width="288" height="145" rx="25" ry="25" stroke-width="6" fill="#f6f6f6" />
-    <rect x="135" y="40" width="7" height="35" rx="1" ry="1" stroke-width="6" fill="red" />
-    <rect x="142" y="40" width="7" height="35" rx="1" ry="1" stroke-width="6" fill="orange" />
-    <rect x="149" y="40" width="7" height="35" rx="1" ry="1" stroke-width="6" fill="yellow" />
-    <rect x="156" y="40" width="7" height="35" rx="1" ry="1" stroke-width="6" fill="green" />
-    <rect x="163" y="40" width="7" height="35" rx="1" ry="1" stroke-width="6" fill="blue" />
-    <rect x="135" y="48" width="45" height="2" rx="0" ry="1" stroke-width="6" fill="white" opacity=0.4 />
-
-    <circle cx="153" cy="105" r="43" fill="#201c19" stoke-width="3" stroke="grey" />
-    <circle cx="153" cy="105" r="40" stroke-width="1" stroke="url(#stripeStroke)" />
-    <circle cx="153" cy="105" r="37" stroke-width="1" stroke="url(#stripeStroke)" />
-    <circle cx="153" cy="105" r="34" stroke-width="1" stroke="url(#stripeStroke)" />
-    <circle cx="153" cy="105" r="31" stroke-width="1" stroke="url(#stripeStroke)" />
-    <circle cx="153" cy="105" r="27" stroke-width="1" stroke="url(#stripeStroke)" />
-    <circle cx="153" cy="105" r="23" fill="#201c19" stroke-width="1" stroke="url(#stripeStroke)" />
-
-    //flash
-    <rect x="18" y="62" width="75" height="74" rx="15" ry="15" stroke-width="3" fill="#201c19" />
-    <rect x="22" y="66" width="68" height="44" rx="10" ry="10" stroke-width="3" fill="#b5adaa" />
-    <rect x="22" y="76" width="68" height="34" rx="1" ry="1" stroke-width="3" fill="#d6cecb" />
-    <rect x="24" y="68" width="1" height="43" rx="2" ry="2" stroke-width="3" fill="#403f44" />
-    <rect x="30" y="65" width="1" height="46" rx="3" ry="3" stroke-width="3" fill="#403f44" />
-    <rect x="36" y="65" width="1" height="46" rx="3" ry="3" stroke-width="3" fill="#403f44" />
-    <rect x="42" y="65" width="1" height="46" rx="3" ry="3" stroke-width="3" fill="#403f44" />
-    <rect x="48" y="65" width="1" height="46" rx="3" ry="3" stroke-width="3" fill="#403f44" />
-    <rect x="54" y="65" width="1" height="46" rx="3" ry="3" stroke-width="3" fill="#403f44" />
-    <rect x="60" y="65" width="1" height="46" rx="3" ry="3" stroke-width="3" fill="#403f44" />
-    <rect x="66" y="65" width="1" height="46" rx="3" ry="3" stroke-width="3" fill="#403f44" />
-    <rect x="72" y="65" width="1" height="46" rx="3" ry="3" stroke-width="3" fill="#403f44" />
-    <rect x="78" y="65" width="1" height="46" rx="3" ry="3" stroke-width="3" fill="#403f44" />
-    <rect x="84" y="65" width="1" height="46" rx="3" ry="3" stroke-width="3" fill="#403f44" />
-
-    //flashright
-    <rect x="210" y="62" width="75" height="74" rx="15" ry="15" stroke-width="3" fill="#201c19" />
-    <rect x="210" y="93" width="75" height="42" rx="15" ry="15" stroke-width="3" fill="#403f44" />
-    <rect x="210" y="93" width="75" height="12" rx="1" ry="1" stroke-width="3" fill="#403f44" />
-
-    //ellipse
-    <ellipse class="shoot" cx="80" cy="35" rx="22" ry="4" fill="grey" stroke-width="1" />
-
-    <ellipse class="shoot" cx="80" cy="35" rx="20" ry="3" fill="#f2ceca" stroke-width="1" />
-    <ellipse id="shutter" class="shoot" cx="80" cy="34" rx="20" ry="3" fill="url(#innerShade)" stroke-width="1" />
-
-    //exit
-    <rect x="42" y="206" width="222" height="14" rx="6" ry="6" stroke-width="3" fill="black" />
-    <rect x="43" y="206" width="220" height="11" rx="6" ry="6" stroke-width="3" fill="#262626" />
-    <rect x="45" y="211" width="216" height="3" rx="1" ry="1" stroke-width="1" fill="black" />
-
-  </svg>
-  <div id="paper-window">
-    <svg class="paper" id="paper" viewBox="0 0 300 320">
-      <g id="advice" class="adv">
-        <rect x="47" y="216" width="212" height="66" fill="white" />
-        <foreignObject x="55" y="220" width="196" height="55">
-          <div xmlns="http://www.w3.org/1999/xhtml" id="txt">
-          </div>
-        </foreignObject>
-      </g>
-    </svg>
-  </div>
-</div>
-
-
-<div class="entry wide" id="witchy">
-  <div></div>
+<div class="robot-stage">
+  <div id="bluerobot"></div>
 </div>
 
 <script src="main.js"></script>
