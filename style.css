@@ -747,8 +747,8 @@ p{
   position:relative;
   font-family: "Share Tech Mono", monospace;
   font-size: 5px;
-  top:-40px;
-  left: -18px;
+  top:-38px;
+  left: -22px;
   
 }
 
@@ -952,8 +952,8 @@ letter-spacing: 1px;
   position: absolute;
   width: 21px; 
   height: 21px;
-  left: 388px;
-  top: 118px;
+  left: 388.49px;
+  top: 118.2px;
   background-color: #25272d; 
   border: 1px solid grey;
   border-radius: 50%;
