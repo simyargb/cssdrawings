@@ -85,20 +85,20 @@ const previousButton = document.querySelector('.previous-button');
 const cassettePlayer = document.querySelector('.casette-player');
 
 const songs = [
-  "../01.mp3",
-  "../02.mp3",
-  "../03.mp3",
-  "../04.mp3",
-  "../05.mp3",
-  "../06.mp3",
-  "../07.mp3",
-  "../08.mp3",
-  "../09.mp3",
-  "../10.mp3",
-  "../11.mp3",
-  "../12.mp3",
-  "../13.mp3",
-  "../14.mp3"
+  "./01 Drive My Car (Remastered 2009).mp3",
+  "./02 Norwegian Wood (This Bird Has Flown) (Remastered 2009) [Y_V6y1ZCg_8].mp3",
+  "./03 You Won't See Me.mp3",
+  "./04 Nowhere Man (Remastered 2009) .mp3",
+  "./05 Think For Yourself (Remastered 2009) .mp3",
+  "./06 The Word (Remastered 2009) .mp3",
+  "./07 The Beatles - Michelle (Remastered 2009).mp3",
+  "./08 What Goes On (Remastered 2009).mp3",
+  "./09 Girl (Remastered 2009) .mp3",
+  "./10 I'm Looking Through You (Remastered 2009).mp3",
+  "./11 The Beatles - In My Life (Remastered 2009).mp3",
+  "./12 Wait (Remastered 2009) .mp3",
+  "./13 If I Needed Someone (Remastered 2009).mp3",
+  "./14 The Beatles - Run For Your Life (Remastered 2009).mp3"
 ];
 
 let currentSongIndex = 0;
