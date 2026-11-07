@@ -6,163 +6,171 @@
 
 html,
 body {
-    margin: 0;
-    width: 100%;
-    height: 100%;
+  margin: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .press-start-2p-regular {
-    font-family: "Press Start 2P", system-ui;
-    font-weight: 100;
-    font-style: normal;
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 100;
+  font-style: normal;
 }
 
 /*Chameleon*/
 .canvas {
-    position: relative;
-    background-color: transparent;
-    width: 100vw;
-    height: 380px;
+  
+  position: relative;
+  background-color: transparent;
+  place-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 380px;
 }
 
 #svgCanvas {
-    background-size: cover;
-    background-position: center;
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #FCFCF2;
+  display:flex;
+  background-size: cover;
+  background-position: center;
+  place-items: center;
+  justify-content: center;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #FCFCF2;
 }
 
+
+
 #chameleon {
-    background-color: transparent;
-    position: absolute;
-    width: 320px;
-    height: 320px;
-    top: 45%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  background-color: transparent;
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /*Instant Camera*/
 
 #instantdiv {
-    position: relative;
-    place-items: center;
-    display: grid;
-    width: 100vw;
-    height: 380px;
-    align-items: center;
-    justify-content: center;
-    background-color: #C72418;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 400px;
-    perspective: 400px;
+  position: relative;
+  place-items: center;
+  display: grid;
+  width: 100vw;
+  height: 380px;
+  align-items: center;
+  justify-content: center;
+  background-color: #C72418;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 400px;
+  perspective: 400px;
 }
 
 #ph {
-    font-family: "Press Start 2P", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 8px;
-    font-weight: 100;
-    margin-top: 24px;
-    margin-left: 0;
-    color: #FCFCF2;
-    margin-bottom: 0;
-    text-align: center;
-    padding-bottom: 0;
-    animation: ph 0.5s steps(1, end) infinite;
-    mix-blend-mode: normal;
-text-shadow: none;
+  font-family: "Press Start 2P", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 8px;
+  font-weight: 100;
+  margin-top: 24px;
+  margin-left: 0;
+  color: #FCFCF2;
+  margin-bottom: 0;
+  text-align: center;
+  padding-bottom: 0;
+  animation: ph 0.5s steps(1, end) infinite;
+  mix-blend-mode: normal;
+  text-shadow: none;
 }
 
 @keyframes ph {
 
-    0%,
-    80% {
-        opacity: 1;
-    }
+  0%,
+  80% {
+    opacity: 1;
+  }
 
-    81%,
-    100% {
-        opacity: 0;
-    }
+  81%,
+  100% {
+    opacity: 0;
+  }
 }
 
 #camera {
-    opacity: 110%;
-    position: relative;
-    width: 300px;
-    height: 300px;
+  opacity: 110%;
+  position: relative;
+  width: 300px;
+  height: 300px;
 }
 
 #paper-window {
-    margin-top: 68px;
-    position: absolute;
-    inset: 0;
-    z-index: 1;
-    overflow: hidden;
-    clip-path: inset(212px 0 0);
-    pointer-events: none;
+  margin-top: 68px;
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  overflow: hidden;
+  clip-path: inset(212px 0 0);
+  pointer-events: none;
 }
 
 #paper {
-    position: absolute;
-    width: 300px;
-    height: 320px;
-    top: 28%;
-    left: 50%;
-    z-index: 1;
-    pointer-events: none;
-    transform: translate(-50%, -50%);
-    transition: transform 700ms ease-out;
+  position: absolute;
+  width: 300px;
+  height: 320px;
+  top: 28%;
+  left: 50%;
+  z-index: 1;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: transform 700ms ease-out;
 }
 
 #paper.ejected {
-    transform: translate(-50%, calc(-50% + 70px));
+  transform: translate(-50%, calc(-50% + 70px));
 }
 
 #paper.remove {
-    animation: paper-fall 1s ease-in forwards;
+  animation: paper-fall 1s ease-in forwards;
 }
 
 @keyframes paper-fall {
-    0% {
-        transform-origin: 47px 216px;
-        transform: translate(-50%, calc(-50% + 70px)) rotate(0deg);
-    }
+  0% {
+    transform-origin: 47px 216px;
+    transform: translate(-50%, calc(-50% + 70px)) rotate(0deg);
+  }
 
-    20% {
-        transform-origin: 47px 216px;
+  20% {
+    transform-origin: 47px 216px;
 
-        transform: translate(-50%, calc(-50% + 80px)) rotate(10deg);
-    }
+    transform: translate(-50%, calc(-50% + 80px)) rotate(10deg);
+  }
 
-    100% {
-                transform-origin: top-right;
-        transform: translate(-50%, calc(-50% + 330px)) rotate(-24deg);
-    }
+  100% {
+    transform-origin: top-right;
+    transform: translate(-50%, calc(-50% + 330px)) rotate(-24deg);
+  }
 }
 
 #shutter {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 #txt {
-    box-sizing: border-box;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    font-size: 7px;
-    line-height: 2;
-    font-weight: 500;
-    white-space: pre-line;
-    font-family: "Press Start 2P", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  box-sizing: border-box;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  font-size: 7px;
+  line-height: 2;
+  font-weight: 500;
+  white-space: pre-line;
+  font-family: "Press Start 2P", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 /* Blue Robot */
@@ -242,46 +250,33 @@ text-shadow: none;
   border-radius: 8px;
 }
 
-#birdy{
+#birdy {
   display: flex;
   align-items: center;
   position: relative;
-  place-content: center; 
-  width:320px;
-  height:320px;
+  place-content: center;
+  width: 320px;
+  height: 320px;
   background-color: Gold;
   scale: 0.7;
-  background:       
-    radial-gradient(ellipse, red 66%, transparent 67%) 
-    4% 26% / 1em 1em,
-      radial-gradient(ellipse, Gold 66%, transparent 67%) 
-    70% 30% / 7em 8em,
-    radial-gradient(ellipse, black 66%, transparent 67%) 
-    70% 33% / 7.3em 8em,
-    radial-gradient(circle, white 66%, transparent 67%) 
-    15% 17% / 1em 1em , 
-    radial-gradient(circle, black 66%, transparent 67%) 
-    15% 17% / 2.4em 2.4em,
-    radial-gradient(ellipse, Gold 66%, transparent 67%) 
-    1% 3% / 8.8em 8.1em,
-    radial-gradient(ellipse, black 66%, transparent 67%) 
-    0% 0% / 8.9em 8.3em,
-    radial-gradient(ellipse, Gold 66%, transparent 67%) 
-    50% 65% / 20em 20em,
-    radial-gradient(ellipse, black 66%, transparent 67%) 
-    50% 50% / 20.5em 20.5em,
-      radial-gradient(ellipse, AntiqueWhite 66%, transparent 67%) 
-    102% 66% / 3em 3em,
-      radial-gradient(ellipse, black 66%, transparent 67%) 
-    99% 70% / 3em 3em,
-      radial-gradient(ellipse, AntiqueWhite 66%, transparent 67%) 
-    32% 100% / 3em 3em,
-      radial-gradient(ellipse, black 66%, transparent 67%) 
-    34% 100% / 3em 3em;
+  background:
+    radial-gradient(ellipse, red 66%, transparent 67%) 4% 26% / 1em 1em,
+    radial-gradient(ellipse, Gold 66%, transparent 67%) 70% 30% / 7em 8em,
+    radial-gradient(ellipse, black 66%, transparent 67%) 70% 33% / 7.3em 8em,
+    radial-gradient(circle, white 66%, transparent 67%) 15% 17% / 1em 1em,
+    radial-gradient(circle, black 66%, transparent 67%) 15% 17% / 2.4em 2.4em,
+    radial-gradient(ellipse, Gold 66%, transparent 67%) 1% 3% / 8.8em 8.1em,
+    radial-gradient(ellipse, black 66%, transparent 67%) 0% 0% / 8.9em 8.3em,
+    radial-gradient(ellipse, Gold 66%, transparent 67%) 50% 65% / 20em 20em,
+    radial-gradient(ellipse, black 66%, transparent 67%) 50% 50% / 20.5em 20.5em,
+    radial-gradient(ellipse, AntiqueWhite 66%, transparent 67%) 102% 66% / 3em 3em,
+    radial-gradient(ellipse, black 66%, transparent 67%) 99% 70% / 3em 3em,
+    radial-gradient(ellipse, AntiqueWhite 66%, transparent 67%) 32% 100% / 3em 3em,
+    radial-gradient(ellipse, black 66%, transparent 67%) 34% 100% / 3em 3em;
   background-repeat: no-repeat;
 }
 
-#birdy::after{
+#birdy::after {
   content: "";
   position: absolute;
   width: 45px;
@@ -289,10 +284,10 @@ text-shadow: none;
   top: 25%;
   left: -8%;
   background:
-    conic-gradient(from 70deg at 0% 0%, 
-  transparent 0deg, 
-  red 20deg 40deg, 
-  transparent 40deg);
+    conic-gradient(from 70deg at 0% 0%,
+      transparent 0deg,
+      red 20deg 40deg,
+      transparent 40deg);
   background-repeat: no-repeat;
 }
 
@@ -303,7 +298,7 @@ text-shadow: none;
   height: 50px;
   border-right: 5px solid black;
   border-radius: 99px;
-  left:20%;
+  left: 20%;
   top: 90%;
   background-color: transparent;
   background-repeat: no-repeat;
@@ -319,77 +314,77 @@ text-shadow: none;
 }
 
 /* Elevetor */
-.panel{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 600px;
-    width: 50%;
-    background-color: #f8ead3;
+.panel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+  width: 50%;
+  background-color: #f8ead3;
 }
 
-.elevator{
-  display:flex;
-  position:relative;
+.elevator {
+  display: flex;
+  position: relative;
   justify-content: center;
-  align-items:center;
+  align-items: center;
   width: 150px;
-  height: 450px;   
+  height: 450px;
   border: 5px solid darkgray;
-  box-shadow:  0 0 2px 2px black,
+  box-shadow: 0 0 2px 2px black,
     inset 0 2px white;
   border-radius: 8px 8px 8px 8px;
   background:
-    radial-gradient(circle closest-side,  #ffffff 0%, #d8dbe0 30%, #d8dbe0 55%, #25272d 73%,  #b2b6bd 75%, #b2b6bd 78%, #25272d 85%, #ffffff 90%,  transparent 95%) 73% 95% / 28% 11%,
-     radial-gradient(circle closest-side,  #ffffff 0%, #d8dbe0 30%, #d8dbe0 55%, #25272d 73%,  #b2b6bd 75%, #b2b6bd 78%, #25272d 85%, #ffffff 90%,  transparent 95%) 32% 95% / 28% 11%,
-    
+    radial-gradient(circle closest-side, #ffffff 0%, #d8dbe0 30%, #d8dbe0 55%, #25272d 73%, #b2b6bd 75%, #b2b6bd 78%, #25272d 85%, #ffffff 90%, transparent 95%) 73% 95% / 28% 11%,
+    radial-gradient(circle closest-side, #ffffff 0%, #d8dbe0 30%, #d8dbe0 55%, #25272d 73%, #b2b6bd 75%, #b2b6bd 78%, #25272d 85%, #ffffff 90%, transparent 95%) 32% 95% / 28% 11%,
+
     /*last button*/
-      radial-gradient(circle closest-side,  #ffffff 0%, #d8dbe0 30%, #d8dbe0 55%, #25272d 73%,  #b2b6bd 75%, #b2b6bd 78%, #25272d 85%, #ffffff 90%,  transparent 95%) 15% 79.7% / 28% 11%,
+    radial-gradient(circle closest-side, #ffffff 0%, #d8dbe0 30%, #d8dbe0 55%, #25272d 73%, #b2b6bd 75%, #b2b6bd 78%, #25272d 85%, #ffffff 90%, transparent 95%) 15% 79.7% / 28% 11%,
 
     radial-gradient(#bec2ca 65%, transparent 70%) 15% 79% / 29% 9%,
-    linear-gradient(#bec2ca  40%, #bec2ca 100%) 46% 79% / 50% 8.8%,
+    linear-gradient(#bec2ca 40%, #bec2ca 100%) 46% 79% / 50% 8.8%,
     radial-gradient(#bec2ca 70%, transparent 70%) 83% 79.05% / 29% 9%,
 
-     /*3rd button*/
-     radial-gradient(circle closest-side,  #ffffff 0%, #d8dbe0 30%, #d8dbe0 55%, #25272d 73%,  #b2b6bd 75%, #b2b6bd 78%, #25272d 85%, #ffffff 90%,  transparent 95%) 15% 68.4% / 28% 11%,
+    /*3rd button*/
+    radial-gradient(circle closest-side, #ffffff 0%, #d8dbe0 30%, #d8dbe0 55%, #25272d 73%, #b2b6bd 75%, #b2b6bd 78%, #25272d 85%, #ffffff 90%, transparent 95%) 15% 68.4% / 28% 11%,
     radial-gradient(#bec2ca 65%, transparent 70%) 15% 68% / 29% 9%,
     linear-gradient(#bec2ca 40%, #bec2ca 100%) 46% 68% / 50% 8.8%,
     radial-gradient(#bec2ca 70%, transparent 70%) 83% 68.05% / 29% 9%,
 
-     /*2nd button*/
-     radial-gradient(circle closest-side,  #ffffff 0%, #d8dbe0 30%, #d8dbe0 55%, #25272d 73%,  #b2b6bd 75%, #b2b6bd 78%, #25272d 85%, #ffffff 90%,  transparent 95%) 15% 57.3% / 28% 11%,
+    /*2nd button*/
+    radial-gradient(circle closest-side, #ffffff 0%, #d8dbe0 30%, #d8dbe0 55%, #25272d 73%, #b2b6bd 75%, #b2b6bd 78%, #25272d 85%, #ffffff 90%, transparent 95%) 15% 57.3% / 28% 11%,
     radial-gradient(#bec2ca 65%, transparent 70%) 15% 57% / 29% 9%,
     linear-gradient(#bec2ca 40%, #bec2ca 100%) 46% 57% / 50% 8.8%,
     radial-gradient(#bec2ca 70%, transparent 70%) 83% 57.05% / 29% 9%,
-    
+
     /*top button*/
-    radial-gradient(circle closest-side,  #ffffff 0%, #d8dbe0 30%, #d8dbe0 55%, #25272d 73%,  #b2b6bd 75%, #b2b6bd 78%, #25272d 85%, #ffffff 90%,  transparent 95%) 15% 45.9% / 28% 11%,
+    radial-gradient(circle closest-side, #ffffff 0%, #d8dbe0 30%, #d8dbe0 55%, #25272d 73%, #b2b6bd 75%, #b2b6bd 78%, #25272d 85%, #ffffff 90%, transparent 95%) 15% 45.9% / 28% 11%,
     radial-gradient(#bec2ca 65%, transparent 70%) 15% 45.8% / 29% 9%,
     linear-gradient(#bec2ca 40%, #bec2ca 100%) 46% 46% / 50% 8.8%,
     radial-gradient(#bec2ca 70%, transparent 70%) 83% 46% / 29% 8.8%,
     linear-gradient(#e3e5e8 40%, #c7cad1 100%) 100% 100% / 100% 100%;
-  background-repeat:no-repeat;
+  background-repeat: no-repeat;
 }
 
 .elevator:after {
-  content:'';
+  content: '';
   position: absolute;
-  width:110px;
+  width: 110px;
   height: 132px;
   background: linear-gradient(#191919 40%, #4c4c4c 100%) 50% 10% / 100% 100%;
   top: 32px;
   border: 1px solid darkgray;
-  box-shadow:  0 0 2px 2px black,
+  box-shadow: 0 0 2px 2px black,
     inset 0 2px white;
   border-radius: 8px 8px 8px 8px;
-  background-repeat:no-repeat;
+  background-repeat: no-repeat;
   z-index: 1;
 }
 
 .elevator:before {
-  content:'';
+  content: '';
   position: absolute;
-  width:99px;
+  width: 99px;
   height: 120px;
   top: 48px;
   left: 30px;
@@ -401,64 +396,62 @@ text-shadow: none;
     linear-gradient(#17191c 100%) 60% 0% / 10% 10%,
     linear-gradient(#17191c 100%) 75% 0% / 10% 10%,
     linear-gradient(#17191c 100%) 90% 0% / 10% 10%,
-        linear-gradient(#17191c 100%) 0% 15% / 10% 10%,
-        linear-gradient(#17191c 100%) 0% 30% / 10% 10%,
-            linear-gradient(#17191c 100%) 0% 45% / 10% 10%,
-            linear-gradient(#17191c 100%) 0% 60% / 10% 10%,
-        linear-gradient(#17191c 100%) 0% 75% / 10% 10%,
-        linear-gradient(#17191c 100%) 0% 90% / 10% 10%,
-          linear-gradient(#17191c 100%) 15% 15% / 10% 10%,
-          linear-gradient(#17191c 100%) 15% 30% / 10% 10%  ,
-              linear-gradient(#17191c 100%) 15% 45% / 10% 10% ,
-              linear-gradient(#17191c 100%) 15% 60% / 10% 10% ,
-              linear-gradient(#17191c 100%) 15% 75% / 10% 10%  ,
-              linear-gradient(#17191c 100%) 15% 90% / 10% 10% ,
-              linear-gradient(#17191c 100%) 30% 30% / 10% 10%,
-              linear-gradient(#17191c 100%) 45% 30% / 10% 10%,
-              linear-gradient(red 100%) 60% 30% / 10% 10%,
+    linear-gradient(#17191c 100%) 0% 15% / 10% 10%,
+    linear-gradient(#17191c 100%) 0% 30% / 10% 10%,
+    linear-gradient(#17191c 100%) 0% 45% / 10% 10%,
+    linear-gradient(#17191c 100%) 0% 60% / 10% 10%,
+    linear-gradient(#17191c 100%) 0% 75% / 10% 10%,
+    linear-gradient(#17191c 100%) 0% 90% / 10% 10%,
+    linear-gradient(#17191c 100%) 15% 15% / 10% 10%,
+    linear-gradient(#17191c 100%) 15% 30% / 10% 10%,
+    linear-gradient(#17191c 100%) 15% 45% / 10% 10%,
+    linear-gradient(#17191c 100%) 15% 60% / 10% 10%,
+    linear-gradient(#17191c 100%) 15% 75% / 10% 10%,
+    linear-gradient(#17191c 100%) 15% 90% / 10% 10%,
+    linear-gradient(#17191c 100%) 30% 30% / 10% 10%,
+    linear-gradient(#17191c 100%) 45% 30% / 10% 10%,
+    linear-gradient(red 100%) 60% 30% / 10% 10%,
     linear-gradient(#17191c 100%) 75% 30% / 10% 10%,
-    linear-gradient(#17191c 100%) 90% 30% / 10% 10% ,
-  linear-gradient(red 100%) 60% 15% / 10% 10% ,
-      linear-gradient(red 100%) 60% 45% / 10% 10% ,
-      linear-gradient(red 100%) 60% 60% / 10% 10%,
-      linear-gradient(red 100%) 60% 75% / 10% 10%,
-      linear-gradient(#17191c 100%) 60% 90% / 10% 10% ,
-    linear-gradient(#17191c 100%) 30% 45% / 10% 10% ,
-        linear-gradient(#17191c 100%) 30% 60% / 10% 10% ,
-    linear-gradient(#17191c 100%) 30% 75% / 10% 10% ,
-        linear-gradient(#17191c 100%) 30% 90% / 10% 10%,
-        linear-gradient(#17191c 100%) 45% 60% / 10% 10% ,
-            linear-gradient(#17191c 100%) 45% 75% / 10% 10% ,
-            linear-gradient(#17191c 100%) 45% 45% / 10% 10% ,
-            linear-gradient(#17191c 100%) 45% 90% / 10% 10% ,
-            linear-gradient(#17191c 100%) 75% 45% / 10% 10%,
-            linear-gradient(#17191c 100%) 75% 60% / 10% 10%,
-            linear-gradient(#17191c 100%) 75% 75% / 10% 10%,
-            linear-gradient(#17191c 100%) 75% 90% / 10% 10% ,
-            linear-gradient(#17191c 100%) 90% 45% / 10% 10% ,
-    linear-gradient(red 100%) 45% 15% / 10% 10% ,
-            linear-gradient(#17191c 100%) 90% 60% / 10% 10% ,
-                linear-gradient(#17191c 100%) 90% 75% / 10% 10%,
-                linear-gradient(#17191c 100%) 90% 90% / 10% 10% ;
-  background-repeat:no-repeat
-  
+    linear-gradient(#17191c 100%) 90% 30% / 10% 10%,
+    linear-gradient(red 100%) 60% 15% / 10% 10%,
+    linear-gradient(red 100%) 60% 45% / 10% 10%,
+    linear-gradient(red 100%) 60% 60% / 10% 10%,
+    linear-gradient(red 100%) 60% 75% / 10% 10%,
+    linear-gradient(#17191c 100%) 60% 90% / 10% 10%,
+    linear-gradient(#17191c 100%) 30% 45% / 10% 10%,
+    linear-gradient(#17191c 100%) 30% 60% / 10% 10%,
+    linear-gradient(#17191c 100%) 30% 75% / 10% 10%,
+    linear-gradient(#17191c 100%) 30% 90% / 10% 10%,
+    linear-gradient(#17191c 100%) 45% 60% / 10% 10%,
+    linear-gradient(#17191c 100%) 45% 75% / 10% 10%,
+    linear-gradient(#17191c 100%) 45% 45% / 10% 10%,
+    linear-gradient(#17191c 100%) 45% 90% / 10% 10%,
+    linear-gradient(#17191c 100%) 75% 45% / 10% 10%,
+    linear-gradient(#17191c 100%) 75% 60% / 10% 10%,
+    linear-gradient(#17191c 100%) 75% 75% / 10% 10%,
+    linear-gradient(#17191c 100%) 75% 90% / 10% 10%,
+    linear-gradient(#17191c 100%) 90% 45% / 10% 10%,
+    linear-gradient(red 100%) 45% 15% / 10% 10%,
+    linear-gradient(#17191c 100%) 90% 60% / 10% 10%,
+    linear-gradient(#17191c 100%) 90% 75% / 10% 10%,
+    linear-gradient(#17191c 100%) 90% 90% / 10% 10%;
+  background-repeat: no-repeat;
 }
 
-
-p{
-  margin-top:118px;
+p {
+  margin-top: 118px;
   line-height: 1.65em;
   margin-left: 35px;
-  font-size:13px;
+  font-size: 13px;
   letter-spacing: 2px;
   color: #17191c;
   mix-blend-mode: multiply;
-  text-shadow: 
-      0px 0px 1px rgba(0, 0, 0, 0.8),   
-      1px 1px 1px rgba(255, 255, 255, 0.4); 
+  text-shadow:
+    0px 0px 1px rgba(0, 0, 0, 0.8),
+    1px 1px 1px rgba(255, 255, 255, 0.4);
 }
 
-.icons{
+.icons {
   position: absolute;
   display: flex;
   width: 100%;
@@ -468,17 +461,15 @@ p{
   font-size: 14px;
   font-weight: 600;
   color: #17191c;
-  left:46px;
+  left: 46px;
   top: 396px;
-    text-shadow: 
-      0px 0px 1px rgba(0, 0, 0, 0.8),   
-      1px 1px 1px rgba(255, 255, 255, 0.4); 
+  text-shadow:
+    0px 0px 1px rgba(0, 0, 0, 0.8),
+    1px 1px 1px rgba(255, 255, 255, 0.4);
 }
 
 
 /*lighter */
-
-
 .lt {
   position: relative;
   place-content: center;
@@ -486,26 +477,25 @@ p{
   height: 600px;
   cursor: pointer;
   display: flex;
-    justify-content: center;
-    align-items: center;
-      isolation: isolate;
-
-    background: #C8A2C8;
+  justify-content: center;
+  align-items: center;
+  isolation: isolate;
+  background: #C8A2C8;
 }
 
 .lighter {
   position: relative;
-  place-content:center;
+  place-content: center;
   width: 120px;
-  height:300px;
+  height: 300px;
   top: 72px;
   border-radius: 0px 8px 8px 8px;
-    z-index: auto;
-  background: linear-gradient(to right, Tomato 5%,  #f37d68 6%, #f37d68 79%, Tomato 71%);
+  z-index: auto;
+  background: linear-gradient(to right, Tomato 5%, #f37d68 6%, #f37d68 79%, Tomato 71%);
 }
 
 .lighter:after {
-  content:"";
+  content: "";
   position: absolute;
   background-repeat: no-repeat;
   width: 70px;
@@ -514,7 +504,7 @@ p{
   top: -88px;
   left: 0px;
   z-index: 1;
-  background: 
+  background:
     linear-gradient(180deg, transparent 3%, transparent 41%, #646868 41%) no-repeat 0% 40% / 22% 5%,
     linear-gradient(180deg, transparent 3%, transparent 41%, #646868 41%) no-repeat 0% 48% / 22% 5%,
     linear-gradient(180deg, transparent 3%, transparent 41%, #646868 41%) no-repeat 0% 56% / 22% 5%,
@@ -523,18 +513,18 @@ p{
 
 
 .lighter:before {
-  content:"";
+  content: "";
   position: absolute;
   background-repeat: no-repeat;
   width: 70px;
   height: 100px;
   top: -86px;
   left: 50px;
-  z-index:-1;
-  background: 
+  z-index: -1;
+  background:
     linear-gradient(to right, #f37d68 3%, #f37d68 6%, #f37d68 59%) no-repeat 44% 12% / 100% 15%,
-    linear-gradient(to right, #f25f45 3%, #f25f45 25%, #f25f45 92%, transparent 92% ,transparent 100%) no-repeat 20% 64% / 100% 64%;
-    transition: top 0.1s ease-out; 
+    linear-gradient(to right, #f25f45 3%, #f25f45 25%, #f25f45 92%, transparent 92%, transparent 100%) no-repeat 20% 64% / 100% 64%;
+  transition: top 0.1s ease-out;
 }
 
 
@@ -548,17 +538,16 @@ p{
   background-repeat: no-repeat;
   width: 80px;
   height: 120px;
-  top: 60px; 
+  top: -162px;
+  left: 0;
   opacity: 0;
-   transform: scale(0.1) translateY(40px);
+  transform: scale(0.1) translateY(40px);
   transform-origin: center bottom;
-  left: 410px;
   background: radial-gradient(ellipse, palegoldenrod 30%, yellow 50%, rgba(255, 255, 0, 0) 70%) no-repeat 30% 15% / 40% 60%;
- transition: transform 0.15s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.1s ease-out;
+  transition: transform 0.15s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.1s ease-out;
 }
 
 .lt.animate .light {
-  
   opacity: 1;
   animation: flameBurner 0.15s infinite alternate ease-in-out;
 }
@@ -568,9 +557,11 @@ p{
     transform: scale(1) translateY(0) scaleX(0.95);
     filter: brightness(1) drop-shadow(0 0 5px rgba(255, 235, 150, 0.4));
   }
+
   50% {
     transform: scale(1.04) translateY(-2px) scaleX(1.02) rotate(-0.5deg);
   }
+
   100% {
     transform: scale(0.98) translateY(1px) scaleX(0.97) rotate(0.5deg);
     filter: brightness(1.2) drop-shadow(0 0 12px rgba(255, 215, 0, 0.6));
@@ -580,8 +571,10 @@ p{
 /*casette player*/
 
 .music {
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  min-height: 455px;
+  min-height: 555px;
   background: #877cfe;
   display: flex;
   justify-content: center;
@@ -589,218 +582,243 @@ p{
   position: relative;
 }
 
+.play-me {
+  font-family: "Share Tech Mono", monospace;
+  color: #65012e;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 4px;
+  margin-top: 12px;
+  text-align: center;
+  left: -16px;
+  position: relative;
+  animation: 0.5s flick steps(1)  infinite;
+}
+
+@keyframes flick {
+
+  0%,
+  80% {
+    opacity: 1;
+  }
+
+  81%,
+  100% {
+    opacity: 0;
+  }
+}
+
 .casette-player {
-  display:flex;
-   scale:1.4;
-  position:relative;
-  align-items:center;
-  place-items:center;
-  justify-content:center;
-  width:720px;
+  display: flex;
+  scale: 1.4;
+  position: relative;
+  align-items: center;
+  place-items: center;
+  justify-content: center;
+  width: 720px;
   height: 455px;
   flex-shrink: 0;
-  /* The 273px-tall artwork starts 36.4px into the box. */
   transform: translateY(54.6px);
   background-repeat: no-repeat;
-  background-position:center;
+  background-position: center;
   background:
-   /*speaker*/
+    /*speaker*/
     linear-gradient(to bottom, #30343b 40%, #25272d 91%) 27% 20% / 5% 60% no-repeat,
     linear-gradient(to bottom, #30343b 40%, #25272d 91%) 73% 20% / 5% 60% no-repeat,
     linear-gradient(to bottom, black 40%, black 91%) 27% 20% / 5.6% 60% no-repeat,
     linear-gradient(to bottom, black 40%, black 91%) 73% 20% / 5.6% 60% no-repeat,
-    
-     linear-gradient(to bottom, #17191c 40%, #25272d 91%) 50% 64% / 35% 11% no-repeat,
-    
+
+    linear-gradient(to bottom, #17191c 40%, #25272d 91%) 50% 64% / 35% 11% no-repeat,
+
     radial-gradient(#9298a5 60%, transparent 61%) 43.8% 27% / 5% 7% no-repeat,
     radial-gradient(#9298a5 60%, transparent 61%) 56% 27% / 5% 7% no-repeat,
     linear-gradient(to bottom, orange 70%, orange 71%) 50% 27% / 6% 5% no-repeat,
     linear-gradient(to bottom, #c4c8cf 40%, #c4c8cf 91%) 50% 23.7% / 24% 25.5% no-repeat,
-    
+
     linear-gradient(to bottom, white 70%, white 71%) 50% 23.25% / 24.7% 26.5% no-repeat,
     linear-gradient(to bottom, #25272d 70%, #25272d 71%) 50% 23% / 25% 27% no-repeat,
     /*cassette holder inner square*/
     linear-gradient(to bottom, #e3e5e8 30%, #e3e5e8 71%) 50% 18% / 35.5% 37.3% no-repeat,
 
-   /*cassette holder*/
+    /*cassette holder*/
     linear-gradient(to bottom, #001833 40%, #001833 71%) 50% 17.9% / 35.9% 38% no-repeat,
-     linear-gradient(to bottom, #d2d5da 40%, #d2d5da 71%) 50% 17.7% / 36.2% 38.3% no-repeat,
+    linear-gradient(to bottom, #d2d5da 40%, #d2d5da 71%) 50% 17.7% / 36.2% 38.3% no-repeat,
     linear-gradient(to bottom, #001833 40%, #001833 71%) 50% 17.6% / 36.5% 38.9% no-repeat,
     linear-gradient(to bottom, #e3e5e8 70%, #e3e5e8 71%) 50% 20% / 50% 60% no-repeat;
 }
 
-.casette-player::after{
-  content:"";
-  position:absolute;
-  width:36px;
-  height:272px;
+.casette-player::after {
+  content: "";
+  position: absolute;
+  width: 36px;
+  height: 272px;
   top: 36px;
-  left:500px;
-  background-image: 
+  left: 500px;
+  background-image:
     radial-gradient(#17191c 60%, transparent 61%),
     radial-gradient(#17191c 60%, transparent 61%);
   background-size: 3px 3px;
   background-position: 0 0, 3px 3px;
 }
 
-.casette-player::before{
-  content:"";
-  position:absolute;
-  width:36px;
-  height:272px;
+.casette-player::before {
+  content: "";
+  position: absolute;
+  width: 36px;
+  height: 272px;
   top: 36px;
-  left:185px;
-  background-image: 
+  left: 185px;
+  background-image:
     radial-gradient(#17191c 60%, transparent 61%),
     radial-gradient(#17191c 60%, transparent 61%);
   background-size: 3px 3px;
   background-position: 0 0, 3px 3px;
 }
 
-.casette-player > button {
+.casette-player>button {
   box-sizing: content-box;
   padding: 0;
   border-bottom: 0;
   cursor: pointer;
 }
 
-.casette-player > button:hover {
+.casette-player>button:hover {
   filter: brightness(0.98);
 }
 
-.casette-player > button:active {
+.casette-player>button:active {
   filter: brightness(0.94);
   transform: translateY(2px);
 }
 
-.casette-player > button:focus-visible {
+.casette-player>button:focus-visible {
   outline: 2px solid #001833;
   outline-offset: 3px;
 }
 
 .power-button {
-  position:absolute;
+  position: absolute;
   width: 43px;
   height: 43px;
   background: #e3e5e8;
   border-top: 6px solid #c4c8cf;
   border-left: 3px solid #c4c8cf;
   border-right: 3px solid #c4c8cf;
-  border-radius:5px;
-  left:236px;
-  top:260px;
+  border-radius: 5px;
+  left: 236px;
+  top: 260px;
 }
-    
+
 .play-pause-button {
-  position:absolute;
+  position: absolute;
   width: 43px;
   height: 43px;
   background: #e3e5e8;
   border-top: 6px solid #c4c8cf;
   border-left: 3px solid #c4c8cf;
   border-right: 3px solid #c4c8cf;
-  border-radius:5px;
-  left:286px;
-  top:260px;
+  border-radius: 5px;
+  left: 286px;
+  top: 260px;
 }
 
 .stopeject-button {
-  position:absolute;
+  position: absolute;
   width: 43px;
   height: 43px;
   background: #e3e5e8;
   border-top: 6px solid #c4c8cf;
   border-left: 3px solid #c4c8cf;
   border-right: 3px solid #c4c8cf;
-  border-radius:5px;
-  left:336px;
-  top:260px;
+  border-radius: 5px;
+  left: 336px;
+  top: 260px;
 }
 
 .next-button {
-  position:absolute;
+  position: absolute;
   width: 43px;
   height: 43px;
   background: #e3e5e8;
   border-top: 6px solid #c4c8cf;
   border-left: 3px solid #c4c8cf;
   border-right: 3px solid #c4c8cf;
-  border-radius:5px;
-  left:436px;
-  top:260px;
+  border-radius: 5px;
+  left: 436px;
+  top: 260px;
 }
 
 .previous-button {
-  position:absolute;
+  position: absolute;
   width: 43px;
   height: 43px;
   background: #e3e5e8;
   border-top: 6px solid #c4c8cf;
   border-left: 3px solid #c4c8cf;
   border-right: 3px solid #c4c8cf;
-  border-radius:5px;
-  left:386px;
-  top:260px;
+  border-radius: 5px;
+  left: 386px;
+  top: 260px;
 }
 
-.buttonstxt{
-  position:relative;
+.buttonstxt {
+  position: relative;
   font-family: "Share Tech Mono", monospace;
   font-size: 5px;
-  top:-38px;
+  top: -38px;
   left: -22px;
-  
+
 }
 
 .casette {
-  display:flex;
-  position:absolute;
+  display: flex;
+  position: absolute;
   justify-content: center;
-  align-items:center;
+  align-items: center;
   width: 167px;
   top: 80px;
   left: 276.5px;
   height: 114px;
   border-radius: 6px;
   background-repeat: no-repeat;
-  background-color:tomato;
+  background-color: tomato;
   mask-image: radial-gradient(circle at 25% 42.5%, transparent 14px, black 14px),
     radial-gradient(circle at 74.2% 42.5%, transparent 14px, black 14px);
   mask-composite: intersect;
   mask-repeat: no-repeat;
 }
 
-.casette::after{
-  content:"";
-  position:absolute;
+.casette::after {
+  content: "";
+  position: absolute;
   width: 120px;
-  top:10px;
-  left:32px;
-  border-radius:6px;
+  top: 10px;
+  left: 32px;
+  border-radius: 6px;
   height: 20px;
   background-color: Wheat;
 }
 
-.casette::before{
-  content:"";
-  position:absolute;
+.casette::before {
+  content: "";
+  position: absolute;
   width: 120%;
-  top:15px;
-  left:-6px;
-  border-radius:6px;
+  top: 15px;
+  left: -6px;
+  border-radius: 6px;
   height: 24px;
-  z-index:3;
+  z-index: 3;
   background: linear-gradient(to bottom, DarkGray 70%, DarkGray 71%) 50% 0% / 50% 4% no-repeat,
     linear-gradient(to bottom, DarkGray 70%, DarkGray 71%) 50% 40% / 50% 4% no-repeat;
-  background-repeat:no-repeat;
+  background-repeat: no-repeat;
 }
 
-.bg-img{
-  position:absolute;
+.bg-img {
+  position: absolute;
   width: 160px;
   justify-content: center;
   place-content: center;
-  top:5px;
+  top: 5px;
   border: 1px solid #eeaaaa;
   height: 76px;
   border-radius: 12px;
@@ -808,57 +826,57 @@ p{
 }
 
 .bg-img::after {
-  content:"";
-  position:absolute;
-   width: 160px;
+  content: "";
+  position: absolute;
+  width: 160px;
   top: 60px;
-   height: 4px;
-   background: RosyBrown;
+  height: 4px;
+  background: RosyBrown;
 }
 
 .bg-img::before {
-  content:"";
-  position:absolute;
-   width: 160px;
+  content: "";
+  position: absolute;
+  width: 160px;
   top: 66px;
-   height: 2px;
-   background: IndianRed;
+  height: 2px;
+  background: IndianRed;
 }
 
-.bottom-level{
-  position:absolute;
+.bottom-level {
+  position: absolute;
   width: 120px;
   justify-content: center;
   place-content: center;
-  top:85px;
+  top: 85px;
   border: 1px solid #eeaaaa;
-  border-top-right-radius:56px;
-  border-top-left-radius:56px;
+  border-top-right-radius: 56px;
+  border-top-left-radius: 56px;
   height: 32px;
   background: tomato;
 }
 
-.atxt{
+.atxt {
   position: relative;
   font-family: "Share Tech Mono", monospace;
   font-size: 18px;
 
   color: IndianRed;
   z-index: 2;
-  left:-14px;
-  top:-85px;
+  left: -14px;
+  top: -85px;
 }
 
-.title{
+.title {
   position: relative;
-letter-spacing: 1px;
+  letter-spacing: 1px;
   font-family: "Share Tech Mono", monospace;
   font-size: 7px;
   color: IndianRed;
   z-index: 2;
-  left:-30px;
-  top:-90px;
-    white-space: nowrap;
+  left: -30px;
+  top: -90px;
+  white-space: nowrap;
 }
 
 .casette-player :is(.gear, .gearright, .fmgear, .fmgearright) {
@@ -871,17 +889,22 @@ letter-spacing: 1px;
 }
 
 @keyframes cassette-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .gear {
   position: absolute;
-  width: 21px; 
+  width: 21px;
   height: 21px;
   left: 306.7px;
   top: 118px;
-  background-color: #17191c; 
+  background-color: #17191c;
   border: 1px solid grey;
   border-radius: 50%;
   display: flex;
@@ -902,28 +925,45 @@ letter-spacing: 1px;
 
 .bar {
   position: absolute;
-  width: 4px; 
-  height: 28px;      
-  background-color: #25272d; 
-  border-radius: 1px;  
+  width: 4px;
+  height: 28px;
+  background-color: #25272d;
+  border-radius: 1px;
 }
 
-.bar:nth-child(1) { transform: rotate(15deg); }
-.bar:nth-child(2) { transform: rotate(45deg); }
-.bar:nth-child(3) { transform: rotate(75deg); }
-.bar:nth-child(4) { transform: rotate(105deg); }
-.bar:nth-child(5) { transform: rotate(135deg); }
-.bar:nth-child(6) { transform: rotate(165deg); }
+.bar:nth-child(1) {
+  transform: rotate(15deg);
+}
+
+.bar:nth-child(2) {
+  transform: rotate(45deg);
+}
+
+.bar:nth-child(3) {
+  transform: rotate(75deg);
+}
+
+.bar:nth-child(4) {
+  transform: rotate(105deg);
+}
+
+.bar:nth-child(5) {
+  transform: rotate(135deg);
+}
+
+.bar:nth-child(6) {
+  transform: rotate(165deg);
+}
 
 
 .fmgear {
   position: absolute;
   width: 30px;
   height: 30px;
-  top:115px;
+  top: 115px;
   left: 385px;
   border-radius: 50%;
-  background-color: DarkSlateGray; 
+  background-color: DarkSlateGray;
   display: flex;
   z-index: 3;
   justify-content: center;
@@ -933,28 +973,45 @@ letter-spacing: 1px;
 
 .fmbar {
   position: absolute;
-  top: calc(50% - 2.5px); 
+  top: calc(50% - 2.5px);
   left: 0;
-  width: 100%;   
-  height: 2px;           
-  background-color: #9298a5; 
-  transform-origin: center; 
+  width: 100%;
+  height: 2px;
+  background-color: #9298a5;
+  transform-origin: center;
 }
 
-.fmbar:nth-child(1) { transform: rotate(-75deg); }
-.fmbar:nth-child(2) { transform: rotate(-45deg); }
-.fmbar:nth-child(3) { transform: rotate(-15deg); }
-.fmbar:nth-child(4) { transform: rotate(15deg); }
-.fmbar:nth-child(5) { transform: rotate(45deg); }
-.fmbar:nth-child(6) { transform: rotate(75deg); }
+.fmbar:nth-child(1) {
+  transform: rotate(-75deg);
+}
+
+.fmbar:nth-child(2) {
+  transform: rotate(-45deg);
+}
+
+.fmbar:nth-child(3) {
+  transform: rotate(-15deg);
+}
+
+.fmbar:nth-child(4) {
+  transform: rotate(15deg);
+}
+
+.fmbar:nth-child(5) {
+  transform: rotate(45deg);
+}
+
+.fmbar:nth-child(6) {
+  transform: rotate(75deg);
+}
 
 .gearright {
   position: absolute;
-  width: 21px; 
+  width: 21px;
   height: 21px;
   left: 388.49px;
   top: 118.2px;
-  background-color: #25272d; 
+  background-color: #17191c;
   border: 1px solid grey;
   border-radius: 50%;
   display: flex;
@@ -975,29 +1032,46 @@ letter-spacing: 1px;
 
 .barright {
   position: absolute;
-  width: 4px; 
-  height: 28px;      
-  background-color: #25272d; 
-  border-radius: 1px;  
+  width: 4px;
+  height: 28px;
+  background-color: #25272d;
+  border-radius: 1px;
 }
 
-.barright:nth-child(1) { transform: rotate(15deg); }
-.barright:nth-child(2) { transform: rotate(45deg); }
-.barright:nth-child(3) { transform: rotate(75deg); }
-.barright:nth-child(4) { transform: rotate(105deg); }
-.barright:nth-child(5) { transform: rotate(135deg); }
-.barright:nth-child(6) { transform: rotate(165deg); }
+.barright:nth-child(1) {
+  transform: rotate(15deg);
+}
+
+.barright:nth-child(2) {
+  transform: rotate(45deg);
+}
+
+.barright:nth-child(3) {
+  transform: rotate(75deg);
+}
+
+.barright:nth-child(4) {
+  transform: rotate(105deg);
+}
+
+.barright:nth-child(5) {
+  transform: rotate(135deg);
+}
+
+.barright:nth-child(6) {
+  transform: rotate(165deg);
+}
 
 
 .fmgearright {
   position: absolute;
   width: 30px;
   height: 30px;
-  top:114px;
+  top: 114px;
   left: 303px;
   z-index: 3;
   border-radius: 50%;
-  background-color: DarkSlateGray; 
+  background-color: DarkSlateGray;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1006,18 +1080,35 @@ letter-spacing: 1px;
 
 .fmbarright {
   position: absolute;
-  top: calc(50% - 2.5px); 
+  top: calc(50% - 2.5px);
   left: 0;
-  width: 100%;     
+  width: 100%;
   z-index: 3;
-  height: 2px;           
-  background-color: #9298a5; 
-  transform-origin: center; 
+  height: 2px;
+  background-color: #9298a5;
+  transform-origin: center;
 }
 
-.fmbarright:nth-child(1) { transform: rotate(-75deg); }
-.fmbarright:nth-child(2) { transform: rotate(-45deg); }
-.fmbarright:nth-child(3) { transform: rotate(-15deg); }
-.fmbarright:nth-child(4) { transform: rotate(15deg); }
-.fmbarright:nth-child(5) { transform: rotate(45deg); }
-.fmbarright:nth-child(6) { transform: rotate(75deg); }
+.fmbarright:nth-child(1) {
+  transform: rotate(-75deg);
+}
+
+.fmbarright:nth-child(2) {
+  transform: rotate(-45deg);
+}
+
+.fmbarright:nth-child(3) {
+  transform: rotate(-15deg);
+}
+
+.fmbarright:nth-child(4) {
+  transform: rotate(15deg);
+}
+
+.fmbarright:nth-child(5) {
+  transform: rotate(45deg);
+}
+
+.fmbarright:nth-child(6) {
+  transform: rotate(75deg);
+}
