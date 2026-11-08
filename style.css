@@ -1127,12 +1127,12 @@ p {
   top:130px;
   
   background-image: 
-    linear-gradient(30deg, #FFF0F5 12%, transparent 12.5%, transparent 87%, #FFF0F5 87.5%, #FFF0F5),
-    linear-gradient(150deg, #FFF0F5 12%, transparent 12.5%, transparent 87%, #FFF0F5 87.5%, #FFF0F5),
-    linear-gradient(30deg, #FFF0F5 12%, transparent 12.5%, transparent 87%, #FFF0F5 87.5%, #FFF0F5),
-    linear-gradient(150deg, #FFF0F5 12%, transparent 12.5%, transparent 87%, #FFF0F5 87.5%, #FFF0F5),
-    linear-gradient(60deg, #B39EB5 25%, transparent 25.5%, transparent 75%, #B39EB5 75.5%, #B39EB5),
-    linear-gradient(60deg, #B39EB5 25%, transparent 25.5%, transparent 75%, #B39EB5 75.5%, #B39EB5);
+    linear-gradient(30deg, #C9A0DC 12%, transparent 12.5%, transparent 87%, #E6E6FA 87.5%, #E6E6FA),
+    linear-gradient(150deg, #E6E6FA 12%, transparent 12.5%, transparent 87%, #C9A0DC 87.5%, #C9A0DC),
+    linear-gradient(30deg, #C9A0DC 12%, transparent 12.5%, transparent 87%, #E6E6FA 87.5%, #E6E6FA),
+    linear-gradient(150deg, #E6E6FA 12%, transparent 12.5%, transparent 87%, #C9A0DC 87.5%, #C9A0DC),
+    linear-gradient(60deg, #BF00FF 25%, transparent 25.5%, transparent 75%, #DA70D6 75.5%, #DA70D6),
+    linear-gradient(60deg, #BF00FF 25%, transparent 25.5%, transparent 75%, #DA70D6 75.5%, #DA70D6);
   
   background-size: 60px 104px; 
   
